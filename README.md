@@ -1,3 +1,5 @@
+![image](https://github.com/yutin1987/QPKG-Ruby/raw/master/icon/ruby_80.gif)
+
 QPKG-Ruby
 =========
 
