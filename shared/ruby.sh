@@ -2,8 +2,7 @@
 CONF=/etc/config/qpkg.conf
 QPKG_NAME="ruby"
 QPKG_DIR=$(/sbin/getcfg $QPKG_NAME Install_Path -d "" -f $CONF)
-PATH_RUBY=/opt/bin/ruby
-PATH_GEM=/opt/bin/gem
+BIN_PATH=/bin
 
 case "$1" in
   start)
@@ -12,14 +11,14 @@ case "$1" in
         echo "$QPKG_NAME is disabled."
         exit 1
     fi
-    cp $QPKG_DIR/ruby $PATH_RUBY
-    cp $QPKG_DIR/gem $PATH_GEM
+    cp $QPKG_DIR/ruby $BIN_PATH/ruby
+    cp $QPKG_DIR/gem $BIN_PATH/gem
     : ADD START ACTIONS HERE
     ;;
 
   stop)
-    rm $PATH_RUBY
-    rm $PATH_GEM
+    rm $BIN_PATH/ruby
+    rm $BIN_PATH/gem
     : ADD STOP ACTIONS HERE
     ;;
 

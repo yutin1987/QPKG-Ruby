@@ -139,7 +139,7 @@ pkg_post_install(){
   PATH_RUBY=/opt/bin/ruby
   PATH_GEM=/opt/bin/gem
   QPKG_DIR=$(/sbin/getcfg $QPKG_NAME Install_Path -d "" -f $CONF)
-  if [ $(/usr/bin/expr match $(arch) "arm") -ne 0 ]; then
+  if [ $(expr match "$(cat /proc/cpuinfo)" '.*ARM') -ne 0 ]; then
     echo "CPU is ARM use ruby_arm"
     $CMD_PKG_TOOL install $QPKG_DIR/ruby_1.9.1.243-2_arm.ipk
   else
