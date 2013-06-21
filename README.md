@@ -10,7 +10,7 @@ QPKG
 =========
 QPKG files/applications makes it easy for [QNAP](http://www.qnap.com/) Turbo NAS to install and remove packages.
 
-Download: http://bit.ly/qpkg_ruby
+Download: http://bit.ly/12Qn1cm
 
 =========
 ![image](https://github.com/yutin1987/QPKG-Ruby/raw/master/icon/ruby_640x400.png)
